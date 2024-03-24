@@ -1,0 +1,28 @@
+<!-- 
+Author: AIT-RAMI
+Date: 24-03-2024
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <div id="drop-area" class="drop-area">
+        <p>Drag and drop your image here or paste an image using Ctrl+V</p>
+        <input type="file" id="fileElem" multiple accept="image/*" style="display:none">
+        <label for="fileElem">Or, <b>select an image from your device</b></label>
+    </div>
+    <div id="preview" class="preview"></div>
+    <button id="sendButton" class="send-button" style="display: none;">Process Image</button>
+    <div id="processedImageContainer" class="processed-image-container"></div>
+    <div id="downloadContainer"></div>
+  </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
